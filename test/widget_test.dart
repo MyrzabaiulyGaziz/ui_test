@@ -8,5 +8,7 @@ void main() {
     await tester.pumpAndSettle();
     final message = find.text("You have pushed the button this many times:");
     expect((message), findsOneWidget);
+    expect(find.text('Please select a plant from the list.'), findsNothing);
+    expect(find.text('0'), findsOneWidget);
   });
 }
